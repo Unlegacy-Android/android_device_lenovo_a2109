@@ -27,15 +27,7 @@ RECOVERY_FSTAB_VERSION := 2
 # inherit from the proprietary version
 -include vendor/lenovo/kai/BoardConfigVendor.mk
 
-TARGET_BOARD_PLATFORM := tegra3
-TARGET_TEGRA_VERSION := t30
-
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := cortex-a9
+include hardware/nvidia/tegra3/BoardConfigCommon.mk
 
 TARGET_NO_RADIOIMAGE := true
 
@@ -102,7 +94,8 @@ ifneq ($(HAVE_NVIDIA_PROP_SRC),false)
 -include vendor/nvidia/build/definitions.mk
 endif
 
-BOARD_SEPOLICY_DIRS := \
+# Security
+BOARD_SEPOLICY_DIRS += \
         device/lenovo/kai/sepolicy
 
 TARGET_RECOVERY_FSTAB = device/lenovo/kai/fstab.kai
