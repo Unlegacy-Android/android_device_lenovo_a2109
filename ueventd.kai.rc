@@ -39,7 +39,7 @@
 /dev/video0     0660    media   camera
 /dev/video1     0660    media   camera
 /dev/spdif*     0660    system  audio
-/dev/ttyHS1    0664    root    system
+/dev/ttyHS1     0664    root    system
 /dev/mpu        0640    system  system
 /dev/mpuirq     0640    system  system
 /dev/accelirq   0640    system  system
@@ -47,3 +47,25 @@
 
 #for FM V4L2 Radio
 /dev/radio      0666    system  radio
+
+# Cpu frequency scaling governors
+/sys/devices/system/cpu/cpufreq		interactive/boost_factor		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/go_maxspeed_load		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/high_freq_min_delay		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/io_is_busy			0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/max_boost			0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/max_normal_freq		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/midrange_freq		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/midrange_go_maxspeed_load	0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/midrange_max_boost		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/min_sample_time		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/sustain_load		0664	system	system
+/sys/devices/system/cpu/cpufreq		interactive/timer_rate			0664	system	system
+
+/sys/devices/system/cpu/cpufreq		conservative/down_threshold		0664	system	system
+/sys/devices/system/cpu/cpufreq		conservative/freq_step			0664	system	system
+/sys/devices/system/cpu/cpufreq		conservative/up_threshold		0664	system	system
+/sys/devices/system/cpu/cpufreq		conservative/ignore_nice_load		0664	system	system
+/sys/devices/system/cpu/cpufreq		conservative/sampling_rate		0664	system	system
+/sys/devices/system/cpu/cpufreq		conservative/sampling_rate_min		0664	system	system
+/sys/devices/system/cpu/cpufreq		conservative/sampling_down_factor	0664	system	system
