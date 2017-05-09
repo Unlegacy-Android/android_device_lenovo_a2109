@@ -82,7 +82,6 @@ PRODUCT_PACKAGES += \
 
 # Wrappers
 PRODUCT_PACKAGES += \
-    libkaicompat \
     libgpsd-compat \
     libstlport
 

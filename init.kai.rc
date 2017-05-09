@@ -3,11 +3,8 @@ import init.IdeaTabA2109A_board.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
-    export LD_SHIM_LIBS libkaicompat.so:/system/vendor/lib/hw/sensors.tegra.so|libkaicompat.so:
 
 on init
-    export LD_SHIM_LIBS libkaicompat.so:/system/vendor/lib/hw/sensors.tegra.so|libkaicompat.so:
-
     # support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
