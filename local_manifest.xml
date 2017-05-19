@@ -1,7 +1,0 @@
-<manifest>
-  <project name="PJBrs/android_device_lenovo_kai" path="device/lenovo/kai" remote="github" revision="aosp-6.0" />
-
-<!-- Kernel -->
-  <project path="kernel/lenovo/kai" name="PJBrs/android_kernel_lenovo_kai" revision="A2109-linux-tegra-nv-3.4-unlegacy" remote="github" />
-</manifest>
-
