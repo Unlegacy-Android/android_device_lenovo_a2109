@@ -5,12 +5,12 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Nvidia hardware, vendor blobs
 $(call inherit-product, vendor/nvidia/tegra3/nvidia-vendor.mk)
-$(call inherit-product-if-exists, vendor/lenovo/kai/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/a2109/device-vendor.mk)
 $(call inherit-product, hardware/nvidia/tegra3/tegra3.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/lenovo/kai/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lenovo/a2109/overlay
 
-LOCAL_PATH := device/lenovo/kai
+LOCAL_PATH := device/lenovo/a2109
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -23,10 +23,10 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/lenovo/kai/fstab.kai:root/fstab.kai \
-    device/lenovo/kai/init.kai.rc:root/init.kai.rc \
-    device/lenovo/kai/init.IdeaTabA2109A_board.usb.rc:root/init.IdeaTabA2109A_board.usb.rc \
-    device/lenovo/kai/ueventd.kai.rc:root/ueventd.kai.rc
+    device/lenovo/a2109/fstab.kai:root/fstab.kai \
+    device/lenovo/a2109/init.kai.rc:root/init.kai.rc \
+    device/lenovo/a2109/init.IdeaTabA2109A_board.usb.rc:root/init.IdeaTabA2109A_board.usb.rc \
+    device/lenovo/a2109/ueventd.kai.rc:root/ueventd.kai.rc
 
 # Build characteristics setting
 PRODUCT_CHARACTERISTICS := tablet
@@ -91,27 +91,27 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # A2109A specific config files
 # Audio config
 PRODUCT_COPY_FILES += \
-    device/lenovo/kai/audio/tiny_hw.xml:system/etc/tiny_hw.xml \
-    device/lenovo/kai/audio/audio_policy.conf:system/etc/audio_policy.conf
+    device/lenovo/a2109/audio/tiny_hw.xml:system/etc/tiny_hw.xml \
+    device/lenovo/a2109/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_COPY_FILES += \
-    device/lenovo/kai/config/ft5x0x_ts.idc:system/usr/idc/ft5x0x_ts.idc \
-    device/lenovo/kai/config:system/usr/idc/raydium_ts.idc \
-    device/lenovo/kai/config:system/usr/idc/sensor00fn11.idc \
-    device/lenovo/kai/config/keylayout/Bluetooth_00_06_66_42.kl:system/usr/keylayout/Bluetooth_00_06_66_42.kl \
-    device/lenovo/kai/config/keylayout/Vendor_044f_Product_d007.kl:system/usr/keylayout/Vendor_044f_Product_d007.kl \
-    device/lenovo/kai/config/keylayout/Vendor_046d_Product_c21e.kl:system/usr/keylayout/Vendor_046d_Product_c21e.kl \
-    device/lenovo/kai/config/keylayout/Vendor_057e_Product_0306.kl:system/usr/keylayout/Vendor_057e_Product_0306.kl \
-    device/lenovo/kai/config/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/lenovo/kai/config/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
-    device/lenovo/kai/config/gps.xml:system/etc/gps/gps.xml \
-    device/lenovo/kai/config/media_profiles.xml:system/etc/media_profiles.xml \
+    device/lenovo/a2109/config/ft5x0x_ts.idc:system/usr/idc/ft5x0x_ts.idc \
+    device/lenovo/a2109/config:system/usr/idc/raydium_ts.idc \
+    device/lenovo/a2109/config:system/usr/idc/sensor00fn11.idc \
+    device/lenovo/a2109/config/keylayout/Bluetooth_00_06_66_42.kl:system/usr/keylayout/Bluetooth_00_06_66_42.kl \
+    device/lenovo/a2109/config/keylayout/Vendor_044f_Product_d007.kl:system/usr/keylayout/Vendor_044f_Product_d007.kl \
+    device/lenovo/a2109/config/keylayout/Vendor_046d_Product_c21e.kl:system/usr/keylayout/Vendor_046d_Product_c21e.kl \
+    device/lenovo/a2109/config/keylayout/Vendor_057e_Product_0306.kl:system/usr/keylayout/Vendor_057e_Product_0306.kl \
+    device/lenovo/a2109/config/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/lenovo/a2109/config/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
+    device/lenovo/a2109/config/gps.xml:system/etc/gps/gps.xml \
+    device/lenovo/a2109/config/media_profiles.xml:system/etc/media_profiles.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    device/lenovo/kai/config/media_codecs.xml:system/etc/media_codecs.xml \
-    device/lenovo/kai/config/enctune.conf:system/etc/enctune.conf \
-    device/lenovo/kai/config/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    device/lenovo/a2109/config/media_codecs.xml:system/etc/media_codecs.xml \
+    device/lenovo/a2109/config/enctune.conf:system/etc/enctune.conf \
+    device/lenovo/a2109/config/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # Add permissions, copied straight from grouper
 PRODUCT_COPY_FILES += \

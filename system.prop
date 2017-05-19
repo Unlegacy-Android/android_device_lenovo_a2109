@@ -1,5 +1,5 @@
 #
-# system.prop for kai
+# system.prop for a2109
 #
 wifi.interface=wlan0
 ro.carrier=wifi-only

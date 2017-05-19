@@ -10,4 +10,4 @@ $(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
     $(transform-prebuilt-to-target)
 
 # include the non-open-source counterpart to this file
--include vendor/lenovo/kai/BoardConfigVendor.mk
+-include vendor/lenovo/a2109/BoardConfigVendor.mk

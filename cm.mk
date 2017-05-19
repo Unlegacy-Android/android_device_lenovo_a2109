@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := kai
+PRODUCT_RELEASE_NAME := a2109
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
@@ -9,11 +9,11 @@ TARGET_SCREEN_WIDTH := 800
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lenovo/kai/full_kai.mk)
+$(call inherit-product, device/lenovo/a2109/full_a2109.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := kai
-PRODUCT_NAME := cm_kai
+PRODUCT_DEVICE := a2109
+PRODUCT_NAME := cm_a2109
 PRODUCT_BRAND := Ideatab
 PRODUCT_MODEL := A2109A
 PRODUCT_MANUFACTURER := Lenovo
