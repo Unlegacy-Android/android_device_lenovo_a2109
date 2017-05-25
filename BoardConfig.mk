@@ -37,8 +37,11 @@ TARGET_BOOTLOADER_BOARD_NAME := a2109a
 BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing androidboot.hardware=kai
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
+TARGET_KERNEL_CONFIG := a2109_defconfig
+TARGET_KERNEL_SOURCE := kernel/nvidia/tegra3
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
-TARGET_PREBUILT_KERNEL := device/lenovo/a2109/kernel
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 671088640
 # System partition might be too small, if so, disable journaling on system.img to save space.
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0

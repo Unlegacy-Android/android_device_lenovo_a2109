@@ -11,18 +11,12 @@ $(call inherit-product, hardware/nvidia/tegra3/tegra3.mk)
 DEVICE_PACKAGE_OVERLAYS += device/lenovo/a2109/overlay
 
 LOCAL_PATH := device/lenovo/a2109
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel \
     device/lenovo/a2109/fstab.kai:root/fstab.kai \
     device/lenovo/a2109/init.kai.rc:root/init.kai.rc \
     device/lenovo/a2109/init.IdeaTabA2109A_board.usb.rc:root/init.IdeaTabA2109A_board.usb.rc \
