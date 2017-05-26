@@ -100,4 +100,4 @@ endif
 BOARD_SEPOLICY_DIRS += \
         device/lenovo/a2109/sepolicy
 
-TARGET_RECOVERY_FSTAB = device/lenovo/a2109/fstab.kai
+TARGET_RECOVERY_FSTAB = device/lenovo/a2109/rootdir/fstab.kai

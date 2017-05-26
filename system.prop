@@ -4,3 +4,6 @@
 wifi.interface=wlan0
 ro.carrier=wifi-only
 ro.sf.lcd_density=160
+
+# Configure PRISM
+persist.tegra.didim.video=5
